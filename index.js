@@ -1,23 +1,33 @@
-let search = "pokemon";
+const url = `https://fakestoreapi.com/products?limit=20`;
+let impresao;
+let place = document.getElementById('place');
+let array= [];
 
-const url = `https://real-time-amazon-data.p.rapidapi.com/search?query=${search}&page=1&country=BR&sort_by=RELEVANCE&product_condition=ALL`;
-const options = {
-	method: 'GET',
-	headers: {
-		'x-rapidapi-key': '35caf11d85msh9348b8c6b71413ep196993jsn6e6e46fb4c0c',
-		'x-rapidapi-host': 'real-time-amazon-data.p.rapidapi.com'
-	}
-};
+async function produtos() { 
 
-async function GetItems() {
-    try {
-        const response = await fetch(url, options);
-        const result = await response.text();
-        const resultjason = JSON.parse(result)
-        console.log(resultjason.data.products);
-    } catch (error) {
-        console.error(error);
-    }
+    fetch(url)
+        .then((res) => res.json())
+        .then((json) => {
+            array = json;
+            console.log(json)
+            return array;
+        })
+        .then((array) => array.forEach(element => {
+            console.log(array)
+        }))
+        .then((array) => {
+                impresao += `
+                <div class="card" style="width: 30%;">
+                    <img class="card-img-top" src="" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title"></h5>
+                        <p></p>
+                        <a href="#" class="btn btn-primary"><i class="bi bi-heart"></i></a>
+                    </div>
+                </div>
+                `,
+                place.innerHTML = impresao}
+        );
 }
 
-GetItems();
+produtos();
