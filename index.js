@@ -15,8 +15,7 @@ async function produtos() {
                 <img class="card-img-top" src="${element.image}" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title">${element.title}</h5>
-                    <p>${element.description}</p>
-                    <a href="#" class="btn btn-primary"><i class="bi bi-heart"></i></a>
+                    <button type="submit"><i class="bi bi-heart"></i></button>
                 </div>
             </div>
             `
