@@ -1,7 +1,7 @@
-const url = `https://fakestoreapi.com/products?limit=20`;
+let url = `https://fakestoreapi.com/products?limit=20`;
 let impresao;
 let place = document.getElementById('place');
-let array= [];
+let array = [];
 
 async function produtos() { 
 
@@ -23,5 +23,30 @@ async function produtos() {
         }))
 }
 
-
 produtos();
+
+function eletronico() {
+    array = [];
+    url = "https://fakestoreapi.com/products/category/jewelery"
+    window.onload;
+    produtos();
+}
+
+function joias() {
+    array = [];
+    url = "https://fakestoreapi.com/products/category/jewelery"
+    window.onload;
+    produtos();}
+function homenRoupas() {
+    array = [];
+    url = "https://fakestoreapi.com/products/category/jewelery"
+    window.onload;
+    produtos();}
+
+function mulheresRoupas() {
+    array = [];
+    url = "https://fakestoreapi.com/products/category/jewelery"
+    window.onload;
+    produtos();}
+
+

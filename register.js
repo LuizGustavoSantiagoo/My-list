@@ -7,29 +7,16 @@
 
 function check() {
 
-    if(pnome.checkValidity()) {
-       place.innerHTML = "nome ok";
-    }
+    if(pnome.checkValidity() && lname.checkValidity() && email.checkValidity() && senha.checkValidity())
 
-    if(lname.checkValidity()) {
-
-    }
-
-    if(email.checkValidity()) {
-        place.innerText
-    }
-
-    if(senha.checkValidity()) {
-
-    }
-
-    if(confirmaSenha.checkValidity()) {
-
-    }
-
-    if(confirmaSenhasenha.checkValidity() === senha.checkValidity()) {
-        place.innerHTML = "baozinho"
-    } else {
-        place.innerHTML = "As senhas não são iguais";
-    }
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        
+        
+        if(check()){
+            place.innerHTML = "ok"
+        } else {
+            place.innerHTML = "nou"
+        }
+})
 }
