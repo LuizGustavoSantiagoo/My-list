@@ -23,30 +23,34 @@ async function produtos() {
         }))
 }
 
-produtos();
 
 function eletronico() {
-    array = [];
+
+    while (place.firstChild) {
+        place.removeChild(place.firstChild);
+    }
+
     url = "https://fakestoreapi.com/products/category/jewelery"
+
     window.onload;
-    produtos();
 }
 
 function joias() {
-    array = [];
+  
     url = "https://fakestoreapi.com/products/category/jewelery"
     window.onload;
-    produtos();}
+}
 function homenRoupas() {
-    array = [];
+
     url = "https://fakestoreapi.com/products/category/jewelery"
     window.onload;
-    produtos();}
+  }
 
 function mulheresRoupas() {
-    array = [];
+
     url = "https://fakestoreapi.com/products/category/jewelery"
     window.onload;
-    produtos();}
+}
 
 
+    produtos();

@@ -9,17 +9,14 @@ body {
 main {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 80vh;
     height: 80vh;
-    border: 1px solid black;
     border-radius: 5px;
     background-color: #131921;
     color: white;
     padding: 10px;
-}
-
-main div {
-    margin-top: clamp(30px, 40px, 50px);
 }
 
 main button {
