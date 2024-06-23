@@ -1,5 +1,7 @@
 let url = `https://fakestoreapi.com/products?limit=20`;
 let impresao = "";
+let userImpressao = " ";
+let nomeUsuario = document.getElementById('user');
 let place = document.getElementById('place');
 
 async function produtos() { 
@@ -62,5 +64,21 @@ function allItems() {
     produtos();
 }
 
+function usuarioLogado() {
+    if(localStorage.getItem("name")) {
+        userImpressao += localStorage.getItem("name");
+        nomeUsuario.innerHTML = userImpressao;
+        document.getElementById("buttLog").disabled = true;
+        document.getElementById("buttReg").disabled = true;
+    } else {
+        userImpressao += `<i class="bi bi-person-circle"></i>`;
+        nomeUsuario.innerHTML = userImpressao;
 
+    }
+
+
+}
+
+usuarioLogado();
+ 
 produtos();

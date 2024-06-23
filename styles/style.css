@@ -12,9 +12,27 @@ main {
     border: 1px solid black;
     width: 80%;
     margin: 10px auto;
-    display: inline-grid;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: auto;
     gap: 20px;
+}
+
+
+@media screen and (min-width:  768px){
+    main {
+        grid-template-columns: auto auto;
+    }
+}
+
+@media screen and (min-width:  1024px){
+    main {
+        grid-template-columns: auto auto auto;
+    }
+}
+
+@media screen and (min-width:  1440px){
+    main {
+        grid-template-columns: auto auto auto auto;
+    }
 }
 
 .card {
