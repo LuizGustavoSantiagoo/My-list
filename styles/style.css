@@ -10,6 +10,7 @@ body main {
 
 main {
     border: 1px solid black;
+    border-radius: 10px;
     width: 80%;
     margin: 10px auto;
     grid-template-columns: auto;
@@ -57,7 +58,8 @@ footer {
     text-decoration: underline;
 }
 
-#buttReg {
+#buttReg, #buttLog {
     color: #F3A847;
     text-decoration: none;
+    margin: 6px 10px 0 10px;
 }
